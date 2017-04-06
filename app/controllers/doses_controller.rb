@@ -15,6 +15,7 @@ before_action :set_dose, only: [:destroy]
 
   def new
     @dose = Dose.new
+    @ingredients = Ingredient.all
     @cocktail = Cocktail.find(params[:cocktail_id])
   end
 
