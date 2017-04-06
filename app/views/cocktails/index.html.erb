@@ -1,11 +1,52 @@
-<h1>Cocktail Menu</h1>
+<!-- Your banner code -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://mac.h-cdn.co/assets/16/15/980x490/landscape-1460656122-mcx-cocktails.jpg');">
+  <div class="banner-content text-center">
+    <h1>Cocktail Menu</h1>
+    <p>Add your favourite cocktail to our database!</p>
+ <!--    <a class="btn btn-primary btn-lg">Let's go...</a> -->
+  </div>
+</div>
 
-<%= link_to "Add a Cocktail", new_cocktail_url %>
 
-<ul>
-<% @cocktails.each do | cocktail |  %>
-<li>  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<%= link_to "Edit", edit_cocktail_path(cocktail) %>
-</li>
-<% end %>
-</ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+        <h1>Our Menu...</h1>
+      <BR>
+        <%= link_to "Add a Cocktail", new_cocktail_url %>
+      <BR>
+      <BR>
+        <ul>
+        <% @cocktails.each do | cocktail |  %>
+        <li>  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <%= link_to "Edit", edit_cocktail_path(cocktail) %>
+        </li>
+        <% end %>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<BR><BR>
+<!-- Your footer code -->
+  <div class="footer text-center">
+    <ul class="list-inline">
+      <li>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </li>
+
+      <li>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </li>
+
+      <li>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+      </li>
+
+      <li>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </li>
+    </ul>
+    <p> This page was created during Le Wagon's first Tokyo Bootcamp, March 2017. Arigatou! </p>
+  </div>
