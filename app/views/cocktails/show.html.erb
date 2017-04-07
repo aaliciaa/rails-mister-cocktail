@@ -5,7 +5,7 @@
   <p><%= dose.description %>
   <%= dose.ingredient.name %></p>
   <% end %>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @cocktail.photo, height: 250, width: 400, crop: :fill %>
 </div>
 
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>

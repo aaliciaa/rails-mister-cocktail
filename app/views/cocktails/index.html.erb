@@ -8,23 +8,20 @@
 </div>
 
 
-
+<!-- PUT THE COCKTAILS IN CARDS: -->
+<h1>Our Menu...</h1>
+<BR>
+  <%= link_to "Add a Cocktail", new_cocktail_url %>
+<BR>
 <div class="container">
   <div class="row">
-    <div class="col-sm-offset-4 col-sm-4">
-        <h1>Our Menu...</h1>
-      <BR>
-        <%= link_to "Add a Cocktail", new_cocktail_url %>
-      <BR>
-      <BR>
-        <ul>
-        <% @cocktails.each do | cocktail |  %>
-        <li>  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-        <%= link_to "Edit", edit_cocktail_path(cocktail) %>
-        </li>
-        <% end %>
-        </ul>
-    </div>
+    <% @cocktails.each do |cocktail|  %>
+      <div class="col-md-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo if cocktail.photo.present? %>')">
+          <h2 class="card-category"><%= cocktail.name.capitalize %></h2>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 
